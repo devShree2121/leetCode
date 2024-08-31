@@ -8,6 +8,7 @@ import java.util.*;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class keypadCombinations {
 
     // Mapping of digits to their corresponding letters.
@@ -44,8 +45,17 @@ public class keypadCombinations {
         }
         
         char digit = digits.charAt(index);
-        String letters = KEYPAD[digit - '0'];
+        String letters;
         
+        // Check if the character is a digit (0-9) or special character (* or #)
+        if (digit >= '0' && digit <= '9') {
+            letters = KEYPAD[digit - '0'];
+        } else if (digit == '*' || digit == '#') {
+            letters = String.valueOf(digit); // map * or # directly
+        } else {
+            throw new IllegalArgumentException("Invalid character in input: " + digit);
+        }
+
         for (char letter : letters.toCharArray()) {
             backtrack(combinations, digits, current + letter, index + 1);
         }
