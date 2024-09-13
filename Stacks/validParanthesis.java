@@ -50,20 +50,20 @@ public class validParanthesis {
                         count++;
                     }
                    if(!myStack.isEmpty()){ myStack.pop();}
-                    if(count<1){return true;}
+                    if(count<=1){return true;}
 
                 }
                 else{
                     myStack.push(ch);
                 }
-            }
+            } 
             return false;
         }
         public static void main(String[] args) {
-            String s1="(a+b)";
+            String s1="((a+b))";
             String s2="([{})";
             System.out.println(isDuplicateParanthesis(s1));
-            System.out.println(isValid(s2));
+            // System.out.println(isValid(s2));
         }
     }
 
