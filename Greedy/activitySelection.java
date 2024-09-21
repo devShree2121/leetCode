@@ -1,4 +1,11 @@
+// Problem statement: Our task is to find the maximum number of works which can be done by a single person given that a person can do single task in single time frame.
+// Approach: This  problem can be solved using greedy algorithm. We will sort the tasks based on their deadlines and then assign  the tasks to the person one by one. If the deadline of the task is less than or  equal to the current time, we assign the task to the person. If the deadline of the task is greater then we will skip that task.
+// Time complexity: O(n log n) due to sorting.
+// Space complexity: O(n) for sorting in place.
+
+
 package Greedy;
+
 
 public class activitySelection {
     public static void main(String[] args) {
