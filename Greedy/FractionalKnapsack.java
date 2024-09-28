@@ -42,8 +42,8 @@ public class FractionalKnapsack {
 
     public static void main(String[] args) {
         // Arrays representing values and weights of items
-        int[] value = {60, 100, 120};
-        int[] weight = {10, 20, 30};
+        int[] value = {60, 100, 120,200};
+        int[] weight = {10, 20, 30,50};
         int capacity = 50; // Capacity of the knapsack
 
         // Calculate the maximum value we can obtain
